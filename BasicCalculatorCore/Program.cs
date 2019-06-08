@@ -11,6 +11,7 @@ namespace BasicCalculatorCore
             IOperable op = new Add();
             int result = (int)(op as IBiOperator).Calc(2, 3);
             Console.WriteLine("2 + 3 = " + result);
+           
         }
     }
 }
