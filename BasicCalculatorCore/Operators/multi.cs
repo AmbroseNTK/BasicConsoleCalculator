@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BasicCalculatorCore.operators
 {
-    class multi : IOperable, IBiOperator
+    class Multi : IOperable, IBiOperator
     {
         public object Calc(object input1, object input2)
         {
