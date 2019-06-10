@@ -7,17 +7,24 @@ namespace BasicCalculatorCore.Operators
 {
     public class ArrayTime : IMonoOperator, IOperable
     {
-        public object[] input;
-        public object Length { get; }
-        public object Time;
+        public double Time;
         public object Calc(object input)
         {
-            Time = input[0];
-            for (object i = 1; i < input.Length; i++)
+            double[] arr = input as double[];
+            if (arr.Length == 0)
             {
-                Sum *= input[i];
+                return 0;
             }
-            return input;
+            Time = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+            {
+                Time *= arr[i];
+            }
+            return Time;
+        }
+        public string Info()
+        {
+            throw new NotImplementedException();
         }
     }
 }
